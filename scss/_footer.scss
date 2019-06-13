@@ -1,0 +1,30 @@
+/* FOOTER */
+
+footer {
+	background: $red;
+	width: 100%;
+	margin: 0;
+	padding: 10px 20px;
+	border-radius: 0 0 20px 20px;
+	font-size: .9em;
+}
+
+
+.footer-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.fa {
+	color: dodgerblue;
+	margin: 10px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}

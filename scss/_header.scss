@@ -1,0 +1,28 @@
+/* --------------------------------------*/
+/* --------------Page-header-------------*/
+/* --------------------------------------*/
+
+.page-header {
+    background-color: black;
+    width: 18em;
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    // margin-top: 4em;
+    // margin-bottom: 8em;
+    margin: 4em auto 8em auto;
+
+    header {
+        margin: 0 auto;
+        
+        .header-title {
+        margin: 0 auto;
+        width: 100%;
+        }
+    }
+}
+
+

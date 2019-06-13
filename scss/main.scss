@@ -1,0 +1,58 @@
+// Global variables and classes 
+
+$red: black;
+$gray: #fff;
+$darkgray: #1C2833;
+
+$open: 'Open Sans', sans-serif;
+$oswald:'Oswald', sans-serif;
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	text-align: center;
+	background: #1C2833;
+	margin: 5px;
+}
+
+.main-container {
+	position: relative;
+	width: 100%;
+	margin: 20px auto 0 auto;
+	padding: 40px;
+	border-radius: 10px 10px 0 0;
+    background: white;
+    background-image: url("../images/1.jpg");
+}
+
+.home-text-display {
+	padding: 20px;
+	margin: 20px auto;
+	border: 5px solid $darkgray;
+    font-size: .7em;
+    background-color: white;
+	h2 {
+		font-family: $open;
+	}
+	p {
+		font-size: 1.5em;
+		font-family: $open;
+	}
+}
+
+.start {
+	font-size: 1.5em;
+	margin: 0 auto 10px auto;
+	width: 9em;
+	border: none;
+	padding: 10px 60px;
+	color: white;
+	background: $red;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px $darkgray;
+}
+
+@import "header";
+@import "footer";
