@@ -12,6 +12,7 @@ body {
 .main-container {
   position: relative;
   width: 100%;
+  min-height: 100vh;
   margin: 20px auto 0 auto;
   padding: 40px;
   border-radius: 10px 10px 0 0;
@@ -19,24 +20,25 @@ body {
   background-image: url("../images/1.jpg");
 }
 
-.home-text-display {
+.home-text-display, .results-text-display {
   padding: 20px;
   margin: 20px auto;
+  margin-bottom: 200px;
   border: 5px solid #1C2833;
   font-size: .7em;
   background-color: white;
 }
 
-.home-text-display h2 {
+.home-text-display .home-text-display h2, .home-text-display .results-text-display h2, .results-text-display .home-text-display h2, .results-text-display .results-text-display h2 {
   font-family: "Open Sans", sans-serif;
 }
 
-.home-text-display p {
+.home-text-display .home-text-display p, .home-text-display .results-text-display p, .results-text-display .home-text-display p, .results-text-display .results-text-display p {
   font-size: 1.5em;
   font-family: "Open Sans", sans-serif;
 }
 
-.start {
+.start, .next, .finish, .restart, .search, .add-search {
   font-size: 1.5em;
   margin: 0 auto 10px auto;
   width: 9em;
@@ -49,12 +51,17 @@ body {
           box-shadow: 5px 5px 0px #1C2833;
 }
 
+.start, .restart, .search, .add-search {
+  -webkit-box-shadow: 5px 5px 0px #1C2833;
+          box-shadow: 5px 5px 0px #1C2833;
+}
+
 /* --------------------------------------*/
 /* --------------Page-header-------------*/
 /* --------------------------------------*/
 .page-header {
   background-color: black;
-  width: 18em;
+  min-width: 10em;
   color: white;
   height: 80px;
   display: -webkit-box;
@@ -77,6 +84,63 @@ body {
 .page-header header .header-title {
   margin: 0 auto;
   width: 100%;
+}
+
+/* QUESTION VIEW */
+.question-display {
+  padding: 10px;
+  margin: 21px auto;
+  background: #1C2833;
+  font-size: .7em;
+  color: white;
+}
+
+.question-display h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
+  font-size: 2em;
+}
+
+.question-progress {
+  width: 100%;
+  margin: 10px auto -10px auto;
+}
+
+.question-progress img {
+  margin-bottom: -15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
+
+li {
+  padding: 10px;
+  margin: 20px 0;
+  font-size: 1.4em;
+  font-family: "Open Sans", sans-serif;
+  background: white;
+  color: #1C2833;
+  cursor: pointer;
+}
+
+.chosen {
+  color: white;
+  background-color: #4fc40c;
+}
+
+.next {
+  -webkit-box-shadow: 5px 5px 0px white;
+          box-shadow: 5px 5px 0px white;
+}
+
+.finish {
+  color: #1C2833;
+  background: white;
+  -webkit-box-shadow: 5px 5px 0px #4fc40c;
+          box-shadow: 5px 5px 0px #4fc40c;
 }
 
 /* FOOTER */
