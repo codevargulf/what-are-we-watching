@@ -6,6 +6,7 @@ bin-release/
 node_modules/
 _results.scss/
 _media.scss/
+scss/
 
 # Other files and folders
 .settings/
