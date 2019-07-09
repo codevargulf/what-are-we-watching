@@ -10,7 +10,6 @@ CSS (Sass)
 JavaScript
 jQuery
 The Movie Database API
-Adobe Illustrator
 
 ## Demo
 
