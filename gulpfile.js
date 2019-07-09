@@ -5,6 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const browserSync = require('browser-sync').create();
 const notifier = require('node-notifier');
 const c = require('ansi-colors');
+const csso = require('gulp-csso');
 
 
 
@@ -35,11 +36,12 @@ const css  = function() {
     return gulp.src('./scss/main.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
-            outputStyle : "expanded" //nested, compact, expanded
+            outputStyle : "compressed" //nested, compact, expanded
          }).on('error', ourError))
          .pipe(autoprefixer({
             browsers: ['last 2 versions']
          }))
+         .pipe(csso())
          .pipe(sourcemaps.write('.'))
          .pipe(gulp.dest('./css'))
          .pipe(browserSync.stream());

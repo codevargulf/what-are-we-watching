@@ -4,6 +4,8 @@ bin-release/
 [Oo]bj/
 [Bb]in/
 node_modules/
+_results.scss/
+_media.scss/
 
 # Other files and folders
 .settings/

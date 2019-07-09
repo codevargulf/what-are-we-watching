@@ -4,7 +4,7 @@
 
 .page-header {
     background-color: black;
-    width: 18em;
+    min-width: 10em;
     color: white;
     height: 80px;
     display: flex;
@@ -26,3 +26,22 @@
 }
 
 
+//   /* HOME VIEW */
+//   header {
+// 	margin: 0 auto; }
+// 	header .header-img {
+// 	  margin: 0 auto;
+// 	  width: 100%; }
+  
+//   .start:active, .next:active, .search:active, .finish:active, .restart:active {
+// 	transform: translateY(4px); }
+  
+//   .illustration {
+// 	width: 100%; }
+  
+//   .placeholder {
+// 	width: 95%;
+// 	height: 450px;
+// 	margin: 0 auto;
+// 	background: #888; }
+  

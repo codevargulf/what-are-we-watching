@@ -6,19 +6,19 @@ var state = {
       text: "Who will you be watching the movie with?",
       choices: [
         {
-          title: "My beloved Family",
+          title: "My Dadddo, Momma, GrandMa, GrandPa and little babes",
           genre: 10751,
         },{
-          title: "My love",
+          title: "My Boo",
           genre: 10749,
         },{
-          title: "My Besties",
+          title: "My BFFs",
           genre: 35,
         },{
-          title: "Just mee",
+          title: "All by myself",
           genre: 18,        
         },{
-          title: "My Baby Pet",
+          title: "My Pet Baby",
           genre: 16,         
         }
       ],
@@ -27,25 +27,25 @@ var state = {
       text: "Are you looking for the real deal or make believe?",
       choices: [
         {
-          title: "Let's keep it real",
+          title: "Plots based on real life",
           genre: 10402,
         },{
-          title: "Take me away from here",
+          title: "Fantasy is fun",
           genre: 14,
         }
       ],
     },
     {
-      text: "Do you like to be spooked?",
+      text: "Do you like being scared?",
       choices: [
         {
-          title: "I just want to be scared pantless",
+          title: "The more terrifying the better",
           genre: 12,
         },{
-          title: "I like thrills but not gore",
+          title: "I prefer suspense over jump scares",
           genre: 18,
         },{
-          title: "No, happy things for me, please, life is scary enough as it is",
+          title: "No, only happy stories for me",
           genre: 35,
         }
       ],
@@ -69,11 +69,11 @@ var state = {
       ],
     },
      {
-      text: "From the quotes below, which do you like the most?",
+      text: "From the lyrics below, which do you like the most?",
       choices: [
         {
-          title: "",
-          genre: 10749,
+          title: "Where's Jack? In the pantry.",
+          genre: 27,
         },{
           title: "",
           genre: 10751,
@@ -136,10 +136,6 @@ var categories = {
       name: "Horror",
       score: 0,  
     },{
-      id: 10402,
-      name: "Music",
-      score: 0,  
-    },{
       id: 9648,
       name: "Mystery",
       score: 0,  
@@ -171,10 +167,9 @@ var categories = {
   ],
 };
 
+
 function displayQuizQuestions(){
   $('.question').text(state.questions[state.current].text);
-  $('.question-image').html('<img src="' + state.questions[state.current].image + '" alt="' + state.questions[state.current].imagealt + '">');
-  $(".question-progress-img").attr("src", state.questions[state.current].progress);
   for (var i = 0; i < state.questions[state.current].choices.length; i++) {
     $(".choices").append('<li id="'+ state.questions[state.current].choices[i].genre +'">'+ state.questions[state.current].choices[i].title +'</li>');
   }
@@ -218,7 +213,7 @@ function searchByGenre(){
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://api.themoviedb.org/3/movie/550?api_key=640a86b1b40357c8fb5959a3796f2af4" + genresToMatch.join("%2C%20") + "&page=1&include_video=false&include_adult=false&sort_by=popularity.desc&language=en-US&api_key=41c96271c1abb0093a43f5f46968c3fc",
+    "url": "https://api.themoviedb.org/3/discover/movie?with_genres=" + genresToMatch.join("%2C%20") + "&page=1&include_video=false&include_adult=false&sort_by=popularity.desc&language=en-US&api_key=640a86b1b40357c8fb5959a3796f2af4",
     "method": "GET",
     "headers": {},
     "data": "{}"
@@ -253,7 +248,7 @@ function searchByUserGenre(){
   var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://api.themoviedb.org/3/movie/550?api_key=640a86b1b40357c8fb5959a3796f2af4" + userGenre[0] + "&page=1&include_video=false&include_adult=false&sort_by=popularity.desc&language=en-US&api_key=640a86b1b40357c8fb5959a3796f2af4",
+    "url": "https://api.themoviedb.org/3/discover/movie?with_keywords=34265&with_genres=" + userGenre[0] + "&page=1&include_video=false&include_adult=false&sort_by=popularity.desc&language=en-US&api_key=640a86b1b40357c8fb5959a3796f2af4",
     "method": "GET",
     "headers": {},
     "data": "{}"
@@ -323,10 +318,4 @@ $(document).ready(function() {
       userGenreSearchList();
     });
 
-});
-
-
-
-
-
-
+  });

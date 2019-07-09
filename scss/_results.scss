@@ -1,0 +1,50 @@
+  /* RESULTS VIEW */
+  .results-view {
+    width: 95%;
+    margin: 0 auto; }
+    
+    .result-item {
+    height: 450px;
+    border: 5px solid #1C2833;
+    background-size: cover;
+    background-position: center center;
+    position: relative; }
+    .result-item p {
+      position: absolute;
+      color: white;
+      background: #C1272D;
+      width: 100%;
+      padding: 10px;
+      bottom: -20px;
+      border-top: 5px solid #1C2833;
+      border-bottom: 5px solid #1C2833;
+      display: block; }
+    
+    a.result-link {
+    overflow: auto;
+    margin-bottom: 20px;
+    display: block; }
+    
+    
+
+/* ADDITIONAL RESULTS */
+.genre-buttons {
+    margin: 0 0 20px 0; }
+  
+  .genre {
+    font-size: 1em;
+    margin: 5px;
+    border: none;
+    padding: 10px;
+    width: 120px;
+    color: white;
+    background: #1C2833;
+    cursor: pointer; }
+  
+  .genre:active {
+    transform: translateY(4px); }
+  
+  .genre-restart {
+    margin: 0 0 10px 0;
+    font-size: 1em; }
+  
