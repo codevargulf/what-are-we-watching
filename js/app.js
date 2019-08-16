@@ -75,13 +75,13 @@ var state = {
           title: "Where's Jack? In the pantry.",
           genre: 27,
         },{
-          title: "",
+          title: "I'm going to make him an offer he can't refuse.",
           genre: 10751,
         },{
-          title: "",
+          title: "You ain't heard nothin' yet!",
           genre: 12,
         },{
-          title: "",
+          title: "My precious.",
           genre: 36,
         }
       ],
